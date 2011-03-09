@@ -1,0 +1,11 @@
+.task_list_templates{ 'data-id' => '{{id}}', 'data-organization' => '{{organization}}', 'id' => 'task_list_template_{{id}}'}
+  %span.drag DRAG
+  .data
+    .name {{name}}
+    %ul
+      {{#tasks}}
+      %li
+        %span.name {{name}}
+        .desc {{desc}}
+      {{/tasks}}
+

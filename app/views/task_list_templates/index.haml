@@ -1,0 +1,11 @@
+%h2= t '.title', :name => @organization
+
+#task_list_templates
+
+:javascript
+  _task_list_templates = #{@task_list_templates.collect(&:to_json).to_json}
+  document.on('dom:loaded', function() {
+    TaskListTemplates.renderAll(_task_list_templates)
+    TaskListTemplates.sortable()
+  })
+

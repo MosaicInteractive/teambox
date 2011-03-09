@@ -492,6 +492,7 @@ en:
       appearance: Appearance
       admin_users: Manage users
       admin_projects: Manage projects
+      task_list_templates: Task List Templates
       billing: Plans and Billing
       invoices: Invoices
       delete: Delete this organization...
@@ -1809,3 +1810,7 @@ en:
     attach: Attach a Google Document
     search_placeholder: Search Google documents
     new_document_placeholder: New document title
+  task_list_templates:
+    index:
+      title: Task List Templates for %{name}
+

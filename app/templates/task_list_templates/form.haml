@@ -1,0 +1,11 @@
+%form{ :action => '/organizations/{{organization}}/task_list_templates/{{id}}', :class => 'edit_task_list_template', :'data-remote' => 'true', :method => 'post' }
+  %input{ :type => 'hidden', :name => '_method', :value => 'put' }
+  %input{ :type => 'text', :name => 'task_list_template[name]', :value => '{{name}}' }
+  %ul
+    {{#tasks}}
+    %li
+      %input{ :type => 'text', :name => 'task_list_template[names][]', :value => '{{name}}' }
+      %input{ :type => 'text', :name => 'task_list_template[descs][]', :value => '{{desc}}' }
+    {{/tasks}}
+    %input{ :type => 'submit', :value => 'Save', :'data-disable-with' => 'Saving'}
+
